@@ -1,0 +1,66 @@
+<!-- Where the patient selects an appointment procedure -->
+
+<!-- navigation menu -->
+<nav class="sitenav">
+   <ul>
+      <li>
+         <input type = "button" value = "Exit" onclick="window.location.href = '/';" name = "submit" class="btn btn-warning btn-lg">
+      </li>
+      <li>
+            <input type="button" onclick="window.location.href = '/home';" value="Home" name="submit" class="btn btn-info btn-lg">   
+      </li>
+      <li id="title">Make Appointment</li>
+   </ul>
+</nav>
+
+<h2>To schedule an appointment, please complete and submit the request form below.</h2>
+
+<!--- Learned from w3schools how to crate slideshows, display pictures-->
+<!--create two column layout-->
+<div class="row">
+   <!--left column with slide shows-->
+   <div class="column left">
+      <div class="slideshow-container">
+
+         <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="/images/cover1.png" alt="cover1" class="responsive">
+         </div>
+
+         <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="/images/cover4.png" class="responsive">
+         </div>
+
+         <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="/images/cover3.png" class="responsive">
+         </div>
+      </div>
+   </div>
+
+   <!-- form for making selecting a procedure from a drop down list that will get added to the table -->
+   <div class="container">
+      <form id="theForm" method="post" action="/date">
+         <div class="form-group">
+            <fieldset>
+               <legend id="mainLegend">Select a Procedure</legend>
+               <div id="listProcedures">
+                  <select id="selectProcedure" name="procedureId">
+                     {{#if procedure}}
+                     {{#each procedure}}
+                     <option value="{{this.procedureId}}">{{this.name}}</option>
+                     {{/each}}
+                     {{/if}}
+                  </select>
+               </div>
+            </fieldset>
+            <input type="hidden" name="nextStep" value="{{nextStep}}">
+            <input type="hidden" name="patientId" value="{{patientId}}">
+            <input type="hidden" name="dentistId" value="{{dentistId}}">
+            <br> 
+            <input type="submit" class="btn btn-warning" value="Submit">
+         </div>
+      </form>
+   </div>
+</div>

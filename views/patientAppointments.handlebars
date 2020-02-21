@@ -1,0 +1,80 @@
+   <!-- List's a patient's appointments -->
+   
+    <!-- navigation menu -->
+    <!-- use bootstrap bottom-->
+    <nav class = "sitenav">
+        <ul>
+            <li>
+            <input type = "button" value = "Exit" onclick="window.location.href = '/';" name = "submit" class="btn btn-warning btn-lg">
+            </li>
+            <li>
+                <input type="button" onclick="window.location.href = '/home';" value="Home" name="submit" class="btn btn-info btn-lg">   
+            </li>
+            <li id="title">View Appointments</li>
+        </ul>
+    </nav>
+
+    <!--Welcome message -->
+    <h2>Welcome to Smile Savers! Let our family take care of yours.</h2>
+   
+
+     <!--- Learned from w3schools how to crate slideshows, display pictures-->
+     <!--create two column layout-->
+    <div class = "row">
+       <!--left column with slide shows-->
+        <div class = "column left"> 
+            <div class="slideshow-container">
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover1.png" alt="cover1" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover4.png" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover3.png" class="responsive">
+             </div>
+            </div>
+        </div>
+
+       <!--right column with form-->
+        <div class = "column right"> 
+
+            <!-- Lists all the patient's appointments -->
+            <div class = "center">
+                <h2 id = "purple" >Appointments for {{name}}</h2>  
+                <div class = "form-group tableResults">
+                    <table id = "resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Date &nbsp;&nbsp; </th>
+                                <th>Time &nbsp; &nbsp;</th>
+                                <th>Procedure &nbsp; &nbsp;</th>
+                                <th>Dentist Name &nbsp;</th>  
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#if appointments}}
+                                {{#each appointments}}
+                                    <tr>
+                                        <td>{{this.date}}</td>
+                                        <td>{{this.time}}</td>
+                                        <td>{{this.procedure}}</td>
+                                        <td>{{this.dentistName}}</td>
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+
+                        </tbody>
+                    </table>
+                </div>
+                <h3 style="color:red;">{{error}}</h3>
+            </div>
+        </div>
+
+ 

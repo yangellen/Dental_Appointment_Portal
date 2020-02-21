@@ -1,0 +1,124 @@
+<!-- Add or Remove Procedures -->
+
+    <!-- navigation menu -->
+    <!-- use bootstrap bottom-->
+    <nav class = "sitenav">
+        <ul>
+            <li>
+                <input type = "button" value = "Exit" onclick="window.location.href = '/';" name = "submit" class="btn btn-warning btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Home" onclick="window.location.href = '/admin';" name = "submit" class="btn btn-info btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Insert Patient" onclick="window.location.href = '/insertPatient';" name = "submit" class="btn btn-success btn-lg">
+            </li>
+            <li>
+                <input type = "button" onclick="window.location.href = '/dentists';" value = "Dentists" name = "submit" class="btn btn-red btn-lg" >
+            </li>    
+            <li>
+                <input type = "button" onclick="window.location.href = '/addRemoveProcedureDentist';" value = "Dentist Procedures" name = "submit" class="btn btn-info btn-lg" >  
+            </li>    
+            <li>
+               <input type = "button" onclick="window.location.href = '/dentistSchedule';" value = "Dentist Schedule" name = "submit" class="btn btn-purple btn-lg" >
+            </li>
+                <li id= "title">Insert Procedure</li>
+        </ul>
+    </nav>
+
+    <!--Welcome message -->
+    <h2>Welcome to Smile Savers! Let our family take care of yours.</h2>
+   
+
+     <!--- Learned from w3schools how to crate slideshows, display pictures-->
+     <!--create two column layout-->
+    <div class = "row">
+        <!--left column with slide shows-->
+        <div class = "column left"> 
+            <div class="slideshow-container">
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover1.png" alt="cover1" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover4.png" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover3.png" class="responsive">
+             </div>
+            </div>
+        </div>
+        
+
+       <!--right column with form-->
+        <div class = "column right"> 
+
+            <!-- a form where the user enters the procedure name and description and sends a post request -->
+            <div class = "container">
+                
+                <form action = "/editProcedureGotInfo" method ="post" id = "procedureInfo">
+                    <div class="form-group">  
+                        <h4 id = "nameError" style="color:red"></h4>
+                        <h4 id = "descriptionError" style="color:red"></h4>
+                        <fieldset>   
+                        <legend>Please enter procedure information</legend>
+
+                            <label for="procedureName">Procedure Name </label>
+                            <input type="text" name="name" placeholder="procedure name" id="name">
+
+                            <label for="description">Description </label>
+                            <input type="text" name="description" placeholder="description" id="description" maxlength="250" size ="100">
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-warning" name="submit" id="submitButton">Add Procedure</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        
+            <br>
+            <br>
+
+            <!-- A table that lists all procedures -->
+            <div class = "center">
+                <div class = "form-group tableResults">
+                    <table id = "resultsTable">
+                        <thead>
+                            <tr>   
+                                <th>Procedure Id &nbsp;&nbsp;</th>
+                                <th>Procedure Name &nbsp;&nbsp; </th>
+                                <th>Description &nbsp; &nbsp;</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {{#if procedures}}
+                                {{#each procedures}}
+                                    <tr>    
+                                        <td>{{this.id}}</td>
+                                        <td>{{this.name}}</td>
+                                        <td>{{this.description}}</td>
+
+                                        <!-- A delete button to delete a procedure -->
+                                        <td> <form action = '/deleteProcedure' method = "POST">
+                                                <input type = "hidden" id="procedureId" name = "procedureId" value = {{this.id}}>
+                                                <input type = "submit" value = "Delete" name = "delete" class="btn btn-purple" >
+                                            </form>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+<script src="../javascript/jScriptProcedureValidation.js"></script>
+ 

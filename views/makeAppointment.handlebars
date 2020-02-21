@@ -1,0 +1,70 @@
+<!-- Where a patient makes an appointment -->
+
+<!-- navigation menu -->
+<nav class="sitenav">
+   <ul>
+      <li>
+         <input type = "button" value = "Exit" onclick="window.location.href = '/';" name = "submit" class="btn btn-warning btn-lg">
+      </li>
+      <li>
+         <input type="button" onclick="window.location.href = '/home';" value="Home" name="submit" class="btn btn-info btn-lg">   
+      </li>
+      <li>
+         <input type = "button" onclick="window.location.href = '/change';" value = "Change Appointment" name = "submit" class="btn btn-success btn-lg"> 
+      </li>
+      <li>
+         <input type = "button" onclick="window.location.href = '/viewAppointments';" value = "View Appointments" name = "submit" class="btn btn-red btn-lg">
+      </li>
+      <li>
+         <input type = "button" onclick="window.location.href = '/cancel';" value = "Cancel Appointment" name = "submit" class="btn btn-purple btn-lg" >
+      </li>
+      <li id="title">Make Appointment</li>
+   </ul>
+</nav>
+
+<h2>To schedule an appointment, please complete and submit the request form below.</h2>
+
+<!--- Learned from w3schools how to crate slideshows, display pictures-->
+<!--create two column layout-->
+<div class="row">
+   <!--left column with slide shows-->
+   <div class="column left">
+      <div class="slideshow-container">
+
+         <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="/images/cover1.png" alt="cover1" class="responsive">
+         </div>
+
+         <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="/images/cover4.png" class="responsive">
+         </div>
+
+         <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="/images/cover3.png" class="responsive">
+         </div>
+      </div>
+   </div>
+
+   <!--right column with form-->
+   <div class="column right">
+      <!-- a form where the patient enters their name and sends a post request to http://access.engr.oregonstate.edu:44467/date -->
+      <div class="container">
+         <form action="/procedure" method="post">
+            <div class="form-group">
+               <fieldset>
+                  <legend>Please enter your patient account number.</legend>
+                  <h4 style = "color:grey;">(Note: for the sake of testing valid patient account numbers incude: 1000-1009)</h4>
+                  <label for="ID">Account Number</label>
+                  <input type="text" name="patientId" placeholder="0000" id="patientId" required>
+               </fieldset>
+               <br>
+               <button type="submit" class="btn btn-warning" name="submit" id="submitButton">Submit</button>
+            </div>
+         </form>
+      </div>
+      <h3 style="color:red;">{{error}}</h3>
+   </div>
+</div>  

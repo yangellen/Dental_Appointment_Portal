@@ -1,0 +1,153 @@
+<!--
+    This page is used to add and remove a dentist's procedures
+ -->
+
+    <!-- navigation menu -->
+    <!-- use bootstrap bottom-->
+    <nav class = "sitenav">
+        <ul>
+            <li>
+               <input type = "button" value = "Exit" onclick="window.location.href = '/';" name = "submit" class="btn btn-warning btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Home" onclick="window.location.href = '/admin';" name = "submit" class="btn btn-info btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Insert Patient" onclick="window.location.href = '/insertPatient';" name = "submit" class="btn btn-success btn-lg">
+            </li>
+            <li>
+               <input type = "button" value = "Procedures" onclick="window.location.href = '/procedures';"  name = "submit" class="btn btn-red btn-lg" >
+            </li>
+            <li>
+                <input type = "button" onclick="window.location.href = '/dentists';" value = "Dentists" name = "submit" class="btn btn-info btn-lg" >
+            </li>
+            <li>
+               <input type = "button" onclick="window.location.href = '/dentistSchedule';" value = "Dentist Schedule" name = "submit" class="btn btn-purple btn-lg" >
+            </li>
+            <li id= "title">Add/Remove Dentist's Procedures</li>
+        </ul>
+    </nav>
+
+    <!--Welcome message -->
+    <h2>Welcome to Smile Savers! Let our family take care of yours.</h2>
+   
+
+     <!--- Learned from w3schools how to crate slideshows, display pictures-->
+     <!--create two column layout-->
+    <div class = "row">
+       <!--left column with slide shows-->
+        <div class = "column left"> 
+            <div class="slideshow-container">
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover1.png" alt="cover1" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover4.png" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover3.png" class="responsive">
+             </div>
+            </div>
+        </div>
+       
+
+       <!--right column with form-->
+        <div class = "column right"> 
+
+            <!-- a form where the staff enters the dentist's id and sends a post request -->
+            <div class = "container">
+                <form action = "/addRemoveProcedureHaveDID" method ="post">
+                <div class="form-group"> 
+                    <fieldset >   
+                    <legend>Please enter dentist's identification number</legend>
+                        <h4 style = "color:grey;">(Note: for the sake of testing valid dentist Ids incude: 10 - 15)</h4>
+                        <label for="firstName">Dentist identification</label>
+                        <input type="number" name="dentistId" placeholder="{{dentistId}}" id="dentistId" value = {{dentistId}} >
+                        <input type = "submit" value = "Enter" class="btn btn-warning">
+                    </fieldset> 
+                    </div>
+                </form>
+                </div>
+                <h3 style = "color:red;">{{error}}</h3>
+                <br>
+
+                <!-- drop down list to select a procedure to add -->
+                <div class = "container" style={{visibilityfill}}  >
+                    <form action = "/addDentistProcedure" method ="post">
+                        <div class="form-group"> 
+                            <fieldset >
+                                <legend id = "mainLegend">Select a Procedure to Add</legend>
+                                <div id = "listProcedures">
+                                    <select id = "selectProcedure" name = "procedure">
+                                        {{#if procedureAdd}}
+                                            {{#each procedureAdd}}
+                                            <option value = "{{this.id}}">{{this.name}}</option>
+                                            {{/each}}
+                                        {{/if}}
+                                    </select>   
+                                </div>   
+                            </fieldset>    
+                        </div>
+                        <input type="hidden" name = "dentistId" value = {{dentistId}} >
+                        <input type = "submit"  value = "Add" class="btn btn-warning">
+                    </form>
+                </div> 
+                <br>
+
+                <!-- drop down list to select a procedure to remove -->
+                <div class = "container" style={{visibilityfill}}  >
+                    <form action = "/removeDentistProcedure" method ="post">
+                        <div class="form-group">
+                            <fieldset >
+                                <legend id = "mainLegend">Or Select a Procedure to Remove</legend>
+                                <div id = "listProcedures">
+                                    <select id = "selectProcedure" name = "procedure">
+                                        {{#if procedureRemove}}
+                                            {{#each procedureRemove}}
+                                            <option value = "{{this.id}}">{{this.name}}</option>
+                                            {{/each}}
+                                        {{/if}}
+                                    </select>   
+                                </div>  
+                            </fieldset>     
+                        </div>
+                        <input type="hidden" name = "dentistId" value = {{dentistId}} >
+                        <input type = "submit" value = "Delete" class="btn btn-warning">
+                    </form>
+                </div>
+            
+        <!-- Table listing all procedures the dentist is currently signed up for -->
+            <div class = "center">
+                <div class = "form-group tableResults" style={{visibilityTable}}>
+                    <h2 id = "purple">Available procedures for {{firstName}} {{lastName}}</h2>
+                    <table id = "resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Procedure Name &nbsp;&nbsp; </th>
+                                <th>Description &nbsp; &nbsp;</th>         
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#if rows}}
+                                {{#each rows}}
+                                    <tr>
+                                        <td>{{this.name}}</td>
+                                        <td>{{this.description}}</td>
+                                
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+ </div>

@@ -1,0 +1,130 @@
+<!-- Insert a new patient -->
+
+    <!-- navigation menu -->
+    <!-- use bootstrap bottom-->
+    <nav class = "sitenav">
+        <ul>
+            <li>
+                <input type = "button" value = "Exit" onclick="window.location.href = '/';" name = "submit" class="btn btn-warning btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Home" onclick="window.location.href = '/admin';" name = "submit" class="btn btn-info btn-lg">
+            </li>
+            <li>
+               <input type = "button" value = "Procedures" onclick="window.location.href = '/procedures';"  name = "submit" class="btn btn-success btn-lg" >
+            </li>
+            <li>
+                <input type = "button" onclick="window.location.href = '/dentists';" value = "Dentists" name = "submit" class="btn btn-red btn-lg" >
+            </li>
+            <li>
+                <input type = "button" onclick="window.location.href = '/addRemoveProcedureDentist';" value = "Dentist Procedures" name = "submit" class="btn btn-info btn-lg" >  
+            </li>
+            <li>
+               <input type = "button" onclick="window.location.href = '/dentistSchedule';" value = "Dentist Schedule" name = "submit" class="btn btn-purple btn-lg" >
+            </li>
+                <li id= "title">Insert Patient</li>
+        </ul>
+    </nav>
+
+    <!--Welcome message -->
+    <h2>Welcome to Smile Savers! Let our family take care of yours.</h2>
+
+     <!--- Learned from w3schools how to crate slideshows, display pictures-->
+     <!--create two column layout-->
+    <div class = "row">
+       <!--left column with slide shows-->
+        <div class = "column left"> 
+            <div class="slideshow-container">
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover1.png" alt="cover1" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover4.png" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover3.png" class="responsive">
+             </div>
+            </div>
+        </div>
+
+       <!--right column with form-->
+        <div class = "column right"> 
+
+            <!-- a form where the staff enters the patient's name, phone number, and dentist and sends a post request-->
+            <div class = "container">
+            <form action = "/insertPatientGotInfo" method ="post" id="patientInfo">
+                <div class="form-group">
+                    <h4 id = "firstNameError" style="color:red"></h4>
+                    <h4 id = "lastNameError" style="color:red"></h4>
+                    <h4 id = "phoneNumberError" style="color:red"></h4>
+                    <fieldset>   
+                    <legend>Please enter patient's information</legend>
+                        <label for="firstName">First Name </label>
+                        <input type="text" name="firstName"  placeholder="first name" id="firstName"  >
+
+                        <label for="lastName">Last Name </label>
+                        <input type="text" name="lastName"   placeholder="last name" id="lastName" >
+
+                        <label for="phoneNumber">phone-number </label>
+                        <input type="text" name="phoneNumber"  placeholder="123-456-7890" id="phoneNumber" >
+                    </fieldset> 
+                    <br>
+                    <br>
+                    <!-- select a dentist from a drop down list to assign the new patient to -->
+                    <fieldset >
+                        <legend id = "mainLegend">Select a Dentist</legend>
+                        <div id = "listDentists">
+                            <select id = "dentistId" name = "dentist">
+                                {{#if dentists}}
+                                    {{#each dentists}}
+                                    <option value = "{{this.id}}">id:{{this.id}} {{this.firstName}} {{this.lastName}}</option>
+                                    {{/each}}
+                                {{/if}}
+                            </select>
+                            
+                        </div>
+                            
+                    </fieldset>
+                    <br>
+                    <button type="submit" class="btn btn-warning" name="submit" id="submitButton">Add Patient</button>
+                </div>
+            </form>
+            </div>
+
+            <!-- A table that lists all the patients and their associated dentist -->
+            <div class = "center">
+                <div class = "form-group tableResults">
+                    <table id = "resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Patient Id &nbsp;&nbsp; </th>
+                                <th>Patient Name&nbsp; &nbsp;</th>
+                                <th>Phone Number &nbsp; &nbsp;</th>
+                                <th>Dentist Name &nbsp;</th>      
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#if patients}}
+                                {{#each patients}}
+                                    <tr>
+                                        <td>{{this.Id}}</td>
+                                        <td>{{this.patientName}}</td>
+                                        <td>{{this.phoneNumber}}</td>
+                                        <td>{{this.dentistName}}</td>
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+ <script src="../javascript/jScriptPatientValidation.js"></script>

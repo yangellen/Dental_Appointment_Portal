@@ -1,0 +1,119 @@
+<!-- Add or Remove Dentists -->
+
+    <!-- navigation menu -->
+    <!-- use bootstrap bottom-->
+    <nav class = "sitenav">
+        <ul>
+            <li>
+                <input type = "button" value = "Exit" onclick="window.location.href = '/';" name = "submit" class="btn btn-warning btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Home" onclick="window.location.href = '/admin';" name = "submit" class="btn btn-info btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Insert Patient" onclick="window.location.href = '/insertPatient';" name = "submit" class="btn btn-success btn-lg">
+            </li>
+            <li>
+               <input type = "button" value = "Procedures" onclick="window.location.href = '/procedures';"  name = "submit" class="btn btn-red btn-lg" >
+            </li>
+            <li>
+                <input type = "button" onclick="window.location.href = '/addRemoveProcedureDentist';" value = "Dentist Procedures" name = "submit" class="btn btn-info btn-lg" >  
+            </li>    
+            <li>
+               <input type = "button" onclick="window.location.href = '/dentistSchedule';" value = "Dentist Schedule" name = "submit" class="btn btn-purple btn-lg" >
+            </li>
+                <li id= "title">Insert/Delete Dentist</li>
+        </ul>
+    </nav>
+
+    <!--Welcome message -->
+    <h2>Welcome to Smile Savers! Let our family take care of yours.</h2>
+   
+
+     <!--- Learned from w3schools how to crate slideshows, display pictures-->
+     <!--create two column layout-->
+    <div class = "row">
+        <!--left column with slide shows-->
+        <div class = "column left"> 
+            <div class="slideshow-container">
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover1.png" alt="cover1" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover4.png" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover3.png" class="responsive">
+             </div>
+            </div>
+        </div>
+       
+
+       <!--right column with form-->
+        <div class = "column right"> 
+
+            <!-- a form where the staff enters the dentist's name and sends a post request  -->
+            <div class = "container">
+            <form action = "/editDentistGotInfo" method ="post"  id = "dentistInfo">
+                <div class="form-group"> 
+                    <h4 id = "firstNameError" style="color:red"></h4>
+                    <h4 id = "lastNameError" style="color:red"></h4>
+                    <fieldset>   
+                    <legend>Insert new dentist</legend>
+                        <label for="firstName">First Name </label>
+                        <input type="text" name="firstName" placeholder="first name" id="firstName">
+                        <label for="lastName">Last Name </label>
+                        <input type="text" name="lastName" placeholder="last name" id="lastName">
+                    </fieldset> 
+                    <br>
+                    <button type="submit" class="btn btn-warning" name="submit" id="submitButton">Add Dentist</button>
+                </div>
+            </form>
+            </div>
+        
+            <br>
+            <br>
+
+            <!-- A table of current dentists -->
+            <div class = "center">
+                <div class = "form-group tableResults">
+                    <table id = "resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Dentist Id &nbsp;&nbsp; </th>
+                                <th>First Name&nbsp; &nbsp;</th>
+                                <th>Last Name&nbsp; &nbsp;</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {{#if dentists}}
+                                {{#each dentists}}
+                                    <tr>
+                                        <td>{{this.Id}}</td>
+                                        <td>{{this.firstName}}</td>
+                                        <td>{{this.lastName}}</td>
+
+                                        <!-- a delete button to delete a dentist -->
+                                        <td> <form action = '/deleteDentist' method = "POST">
+                                                <input type = "hidden" id="dentistId" name = "dentistId" value = {{this.Id}}>
+                                                <input type = "submit" value = "Delete" name = "delete" class="btn btn-purple" >
+                                            </form>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+ <script src="../javascript/jScriptDentistValidation.js"></script>

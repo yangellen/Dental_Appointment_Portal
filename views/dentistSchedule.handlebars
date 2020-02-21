@@ -1,0 +1,190 @@
+<!-- This page is used by dentists to schedule time off and/or cancel patient appointments -->
+
+    <!-- navigation menu -->
+    <!-- use bootstrap bottom-->
+    <nav class = "sitenav">
+        <ul>
+            <li>
+                <input type = "button" value = "Exit" onclick="window.location.href = '/';" name = "submit" class="btn btn-warning btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Home" onclick="window.location.href = '/admin';" name = "submit" class="btn btn-info btn-lg">
+            </li>
+            <li>
+                <input type = "button" value = "Insert Patient" onclick="window.location.href = '/insertPatient';" name = "submit" class="btn btn-success btn-lg">
+            </li>
+            <li>
+               <input type = "button" value = "Procedures" onclick="window.location.href = '/procedures';"  name = "submit" class="btn btn-red btn-lg" >
+            </li>
+            <li>
+                <input type = "button" onclick="window.location.href = '/dentists';" value = "Dentists" name = "submit" class="btn btn-info btn-lg" >
+            </li>
+            <li>
+                <input type = "button" onclick="window.location.href = '/addRemoveProcedureDentist';" value = "Dentist Procedures" name = "submit" class="btn btn-purple btn-lg" >  
+            </li>
+
+            <li id= "title">Dentist Schedule Unavailability</li>
+        </ul>
+    </nav>
+
+      
+
+     <!--- Learned from w3schools how to crate slideshows, display pictures-->
+     <!--create two column layout-->
+    <div class = "row">
+        <!--left column with slide shows-->
+       <!--left column with slide shows-->
+        <div class = "column left"> 
+            <div class="slideshow-container">
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover1.png" alt="cover1" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover4.png" class="responsive">
+             </div>
+
+             <div class ="mySlides">
+             <div class="numbertext"></div>
+             <img src ="/images/cover3.png" class="responsive">
+             </div>
+            </div>
+        </div>
+
+       <!--right column with form-->
+        <div class = "column right"> 
+
+            <!-- a form where the dentist enter their id and sends a post request  -->
+            <div class = "container">
+                <form action = "/scheduleHaveId" method ="post">
+                    <div class="form-group"> 
+                        <fieldset >   
+                            <legend id = "purple" >Please enter dentist identification number</legend>
+                            <h4 style = "color:grey;">(Note: for the sake of testing valid dentist Ids incude: 10 - 15)</h4>
+                            <label for="firstName">Dentist identification</label>
+                            <input type="number" name="dentistId" placeholder="{{dentistId}}" id="dentistId" value = {{dentistId}} >                           
+                        </fieldset> 
+                        <input type = "hidden" name = "haveDate" value = "no">
+                        <input type = "submit" class="btn btn-warning" value = "Enter">
+                    </div>
+                </form>
+            </div>
+               <h3 style = "color:red;">{{error}}</h3>
+            <br>
+            <br>
+            
+            <!-- If want to book time off then input a date -->
+            <div class = "container smallContainer" style={{visibilityfill}} >
+                <form action = "/scheduleHaveDate" method ="post">
+                    <legend id = "purple">Schedule Time Off</legend>
+                    <fieldset id = "withBorder"> 
+                    <div class="form-group pad"> 
+                        <fieldset>
+                                <p id = "dateError" style = "color:red"></p>
+                                <legend id = "mainLegend">Select Date</legend>
+                                <div>
+                                    <label for = "dateField">Select a Day:</label>
+                                    <input type= "date" id="dateField" name = "day" value = {{date}}>
+                                </div>
+                        </fieldset>
+                        <input type = "hidden" name = "haveDate" value = "yes">
+                        <input type = "hidden" name = "dentistId" value = {{dentistId}}>
+                        <input type = "submit" class="btn btn-warning" value = "Add Date">
+                    </div>
+                
+                    <!-- If want to book time off then input a time -->
+                    <div class="form-group pad">
+                        {{#if date}}
+                            <fieldset>
+                                <legend >Select Time</legend>
+                                <div id = "listTimes">
+                                    <select id = "selectTime" name = "time">
+                                        {{#if times}}
+                                            {{#each times}}
+                                            <option value = "{{unformattedTime}}">{{time}}</option>
+                                            {{/each}}
+                                        {{/if}}
+                                    </select>
+                                </div>
+                            </fieldset>
+                            
+                            <br>
+                            <input type="hidden" name = "dentistId" value = {{dentistId}} >
+                            <input type="hidden" name = "date" value = {{date}} >
+                            <input type = "submit" formaction = '/addDentistTimeOff'  value = "Add Time" class="btn btn-warning">
+                        {{/if}}
+                    </div>
+                    
+                    </fieldset>
+                </form>
+            </div> 
+            
+
+            <!-- a drop down list with current appointments that are used to select one to remove -->
+            <div class = "container mediumContainer " style={{visibilityfill}} >
+                <form action = "/removeAppDentist" method ="post">
+                    <div class="form-group">
+                        <fieldset>
+                            <legend id = "purple">Or Select an Appointment to Remove</legend>
+                            <div>
+                                <select id = "selectApp" name = "app">
+                                    {{#if appointmentsDropDown}}
+                                        {{#each appointmentsDropDown}}
+                                        <option value = "{{value}}"> procedure:{{procedure}}, {{date}} {{time}}</option>
+                                        {{/each}}
+                                    {{/if}}
+                                </select>
+                            </div>
+                        </fieldset>
+                        
+                    </div>
+                    <input type="hidden" name = "dentistId" value = {{dentistId}} >
+                    <input type = "submit"  value = "Delete"class="btn btn-warning" >
+                </form>
+            </div>
+           
+           <!-- print all the dentist's booked time -->
+            <div class = "center">
+                <div class = "form-group tableResults" style={{visibilityTable}}>
+                    <h2 id = "purple">Schedule for {{dfirstName}} {{dlastName}}</h2>
+                    <table id = "resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Patient First Name &nbsp&nbsp</th>
+                                <th>Patient Last Name &nbsp&nbsp</th>
+                                <th>Procedure&nbsp&nbsp</th>
+                                <th>Date&nbsp&nbsp</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {{#if appointmentsTable}}
+                                {{#each appointmentsTable}}
+                                    <tr>
+                                        <td>{{this.firstName}}</td>
+                                        <td>{{this.lastName}}</td>
+                                        <td>{{this.procedure}}</td>
+                                        <td>{{this.date}}</td>
+                                        <td>{{this.time}}</td>
+                                    </tr>
+                                {{/each}}
+                            {{/if}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <br>
+            </div>
+        </div>
+
+         </div>
+
+<!-- Used to verify that a selected date is not yesterday or today and that appointments are not made at the weekend -->
+ <script src="../javascript/jScriptDateValidation.js"></script>
+ 
