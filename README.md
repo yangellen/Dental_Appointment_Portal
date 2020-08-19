@@ -26,7 +26,8 @@ Javascript     |  Handlebars
     
     <img src="./screenshots/Site_Home.png" alt="Site_Home" width="500"> 
     
-    <br />
+    &nbsp;
+    &nbsp;
     
 2. For Patients
 
