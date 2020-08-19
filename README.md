@@ -133,17 +133,23 @@ Javascript     |  Handlebars
     <img src="./screenshots/View_all_booked_appointments.png" alt="View_all_booked_appointments." width="500">    
     
     &nbsp;
-    &nbsp;    
+    &nbsp;  
     
-<img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt="Displays_a_table_of_the_patient's_appointments" width="500"> 
-                                                                                                                
+    12) View appointments table.
+    
+    CRUD:
+    
+    1) select the patient’s name based on the patient account number (patient id)
+    
+    2) select the patient’s appointments from the appointment table and display the dentist’s name too through an inner join    
+    
+    <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt="Displays_a_table_of_the_patient's_appointments" width="500"> 
+    
+    &nbsp;
+    &nbsp;                                                                                                                
                                                                                                                 
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
 <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
-
-
-
-
 
 <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
