@@ -179,12 +179,31 @@ Javascript     |  Handlebars
     <img src="./screenshots/Where_an_administrator_adds_a_patient.png" alt="Where_an_administrator_adds_a_patient" width="500"> 
     
     &nbsp;
-    &nbsp;   
+    &nbsp;  
+    
+    4) Insert or delete a procedure.
+    
+    CRUD:
+    
+        1) Populate a table with all procedures: Select all from the dental_procedure table
+        
+        2) If Choose to add a procedure: Insert into the dental_procedure table the name and description of a new procedure
+        
+        3) If Choose to delete a procedure:
+        
+            1. Delete procedure from many-to-many table dentist_dental_procedure 
+            
+            2. Delete procedure from dental_procedure table   
+            
+    <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png"
+    
+    &nbsp;
+    &nbsp;    
     
     
     <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
 
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist.png" alt="Where_an_administrator_adds_or_removes_a_dentist" width="500"> 
-<img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png" alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">  
+ alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">  
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_procedure.png" alt="Where_an_administrator_adds_or_removes_a_procedure" width="500">                                                                                                                                              
