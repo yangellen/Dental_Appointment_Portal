@@ -107,7 +107,8 @@ Javascript     |  Handlebars
     
     &nbsp;
     &nbsp;
-    
+  
+  
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
 <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
 
