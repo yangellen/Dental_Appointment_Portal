@@ -121,13 +121,13 @@ Javascript     |  Handlebars
     
     CRUD: Delete from appointment the appointment with the specified date, time and dentist Id.   
     
-    <img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt=Confirms_that_an_appointment_was_deleted" width="500">
+    <img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt="Confirms_that_an_appointment_was_deleted" width="500">
     
     &nbsp;
     &nbsp; 
     
     
-<img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments" width="500"> 
+<img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt="Displays_a_table_of_the_patient's_appointments" width="500"> 
                                                                                                                 
                                                                                                                 
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
