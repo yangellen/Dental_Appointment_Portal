@@ -55,6 +55,12 @@ Javascript     |  Handlebars
     <img src="./screenshots/Enter_the_appointment_date.png" alt="Enter_the_appointment_date" width="500">  
     
     
+    5) Make or change an appointment step 4: select the time from a drop-down list.    
+
+    CRUD: select the times (in half hour intervals) that the dentist is unavailable on the given date.
+    
+    <img src="./screenshots/Enter_appointment_time.png" alt="Enter_appointment_time" width="500">  
+    
     
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
 <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
@@ -65,7 +71,7 @@ Javascript     |  Handlebars
 <img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt=Confirms_that_an_appointment_was_deleted"" width="500">
 <img src="./screenshots/Confirms_the_appointment_date_and_time.png" alt="Confirms_the_appointment_date_and_time" width="500">
 <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments"" width="500"> 
-<img src="./screenshots/Enter_appointment_time.png" alt="Enter_appointment_time" width="500">   
+ 
 
  
 <img src="./screenshots/View_all_booked_appointments.png" alt="View_all_booked_appointments." width="500">
