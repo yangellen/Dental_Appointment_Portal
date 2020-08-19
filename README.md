@@ -18,7 +18,7 @@ Javascript     |  Handlebars
 <img src="./documentation/Schema.png" alt="Schema" width="500">
 
 ### Screenshots of Website
-1. General
+1) General
 
     Site home page. 
 
@@ -26,9 +26,9 @@ Javascript     |  Handlebars
     
     <img src="./screenshots/Site_Home.png" alt="Site_Home" width="500"> 
     
-2. For Patients
+2) For Patients
 
-    1) Patient home page.
+    1. Patient home page.
     
     CRUD: select from procedure all procedures and their descriptions except for the procedure “Unavailable”.
     
