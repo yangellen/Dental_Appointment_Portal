@@ -195,7 +195,7 @@ Javascript     |  Handlebars
             
             2. Delete procedure from dental_procedure table   
             
-    <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png"
+    <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png" alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500"> 
     
     &nbsp;
     &nbsp;    
@@ -205,5 +205,5 @@ Javascript     |  Handlebars
 
 
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist.png" alt="Where_an_administrator_adds_or_removes_a_dentist" width="500"> 
- alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">  
+  
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_procedure.png" alt="Where_an_administrator_adds_or_removes_a_procedure" width="500">                                                                                                                                              
