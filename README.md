@@ -18,8 +18,8 @@ Javascript     |  Handlebars
 <img src="./documentation/Schema.png" alt="Schema" width="500">
 
 ### Screenshots of Website
-#### 1. General
-    ** Site home page. **
+1. General
+    Site home page. 
 
     CRUD: Select from procedure all procedures and their descriptions except for the procedure “Unavailable”.
     
