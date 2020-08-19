@@ -41,11 +41,19 @@ Javascript     |  Handlebars
     
     <img src="./screenshots/Make_an_appointment.png" alt="Make_an_appointment" width="500">
     
+    
     3) Make appointment step 2: select a procedure.
     
     CRUD: select the procedures that the patient’s dentist performs except for the procedure “unavailable”. 
     
     <img src="./screenshots/Enter_the_appointment_procedure.png" alt="Enter_the_appointment_procedure" width="500">    
+    
+    4) Make or change an appointment step 3: select a date. 
+    
+    No CRUD functionality.    
+    
+    <img src="./screenshots/Enter_the_appointment_date.png" alt="Enter_the_appointment_date" width="500">  
+    
     
     
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
@@ -58,11 +66,8 @@ Javascript     |  Handlebars
 <img src="./screenshots/Confirms_the_appointment_date_and_time.png" alt="Confirms_the_appointment_date_and_time" width="500">
 <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments"" width="500"> 
 <img src="./screenshots/Enter_appointment_time.png" alt="Enter_appointment_time" width="500">   
-<img src="./screenshots/Enter_the_appointment_date.png" alt="Enter_the_appointment_date" width="500">  
 
  
-
-
 <img src="./screenshots/View_all_booked_appointments.png" alt="View_all_booked_appointments." width="500">
 
 <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
