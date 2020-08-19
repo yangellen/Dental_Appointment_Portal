@@ -97,7 +97,16 @@ Javascript     |  Handlebars
     <img src="./screenshots/Change_an_appointment.png" alt="Change_an_appointment" width="500">  
     
     &nbsp;
-    &nbsp;    
+    &nbsp;   
+    
+    8) Change or cancel an appointment step 2: Select an appointment to change or cancel.
+    
+    CRUD: select appointments from appointment for the patient with the given account number (patient id). 
+    
+    <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments"" width="500">  
+    
+    &nbsp;
+    &nbsp;
     
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
 <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
@@ -107,7 +116,7 @@ Javascript     |  Handlebars
 
 <img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt=Confirms_that_an_appointment_was_deleted"" width="500">
 
-<img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments"" width="500"> 
+
  
 
  
