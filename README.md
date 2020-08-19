@@ -19,9 +19,10 @@ Javascript     |  Handlebars
 
 ### Screenshots of Website
 #### 1. General
-    **Site home page.**
+    ** Site home page. **
 
     CRUD: Select from procedure all procedures and their descriptions except for the procedure “Unavailable”.
+    
     <img src="./screenshots/Site_Home.png" alt="Site_Home" width="500">  
 
 
