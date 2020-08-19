@@ -115,7 +115,7 @@ Javascript     |  Handlebars
 <img src="./screenshots/Cancel_an_appointment.png" alt="Cancel_an_appointment" width="500">
 
 
-<img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt=Confirms_that_an_appointment_was_deleted"" width="500">
+<img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt=Confirms_that_an_appointment_was_deleted" width="500">
 
 
  
