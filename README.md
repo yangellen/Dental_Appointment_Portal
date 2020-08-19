@@ -14,4 +14,4 @@ Javascript     |  Handlebars
 &nbsp;         |  My SQL
 
 ### Database Design
-<img src="./documentation/ERD.png" alt="ERD" width="500">
+<img src="./documentation/Entity_Relationship_Diagram.png" alt="ERD" width="500">
