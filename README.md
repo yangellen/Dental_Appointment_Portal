@@ -168,9 +168,23 @@ Javascript     |  Handlebars
     &nbsp;
     &nbsp;
     
+    3) Insert a new patient.
+    CRUD:
+        1) select all dentists to fill a drop-down list
+        
+        2) insert into patient table a new patient with the entered name and selected dentist
+        
+        3) display all patients: select all information from the patient table and their dentist’s name through an inner join  
+       
+    <img src="./screenshots/Where_an_administrator_adds_a_patient.png" alt="Where_an_administrator_adds_a_patient" width="500"> 
+    
+    &nbsp;
+    &nbsp;   
+    
+    
     <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
-<img src="./screenshots/Where_an_administrator_adds_a_patient.png" alt="Where_an_administrator_adds_a_patient" width="500"> 
+
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist.png" alt="Where_an_administrator_adds_or_removes_a_dentist" width="500"> 
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png" alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">  
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_procedure.png" alt="Where_an_administrator_adds_or_removes_a_procedure" width="500">                                                                                                                                              
