@@ -34,11 +34,18 @@ Javascript     |  Handlebars
     
     <img src="./screenshots/Patient_Home.png" alt="Patient_Home" width="500">    
     
+    
     2) Make appointment step 1: enter patient account number.
     
     CRUD: select dentist id and patient id (used to verify) using patient account number (patient id).
     
     <img src="./screenshots/Make_an_appointment.png" alt="Make_an_appointment" width="500">
+    
+    3) Make appointment step 2: select a procedure.
+    
+    CRUD: select the procedures that the patient’s dentist performs except for the procedure “unavailable”. 
+    
+    <img src="./screenshots/Enter_the_appointment_procedure.png" alt="Enter_the_appointment_procedure" width="500">    
     
     
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
@@ -52,11 +59,12 @@ Javascript     |  Handlebars
 <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments"" width="500"> 
 <img src="./screenshots/Enter_appointment_time.png" alt="Enter_appointment_time" width="500">   
 <img src="./screenshots/Enter_the_appointment_date.png" alt="Enter_the_appointment_date" width="500">  
-<img src="./screenshots/Enter_the_appointment_procedure.png" alt="Enter_the_appointment_procedure" width="500">
+
  
 
 
 <img src="./screenshots/View_all_booked_appointments.png" alt="View_all_booked_appointments." width="500">
+
 <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 <img src="./screenshots/Where_a_patient_selects_and_appointment_to_cancel.png" alt="Where_a_patient_selects_an_appointment_to_cancel" width="500">
 <img src="./screenshots/Where_an_administrator_adds_a_patient.png" alt="Where_an_administrator_adds_a_patient" width="500"> 
