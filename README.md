@@ -19,6 +19,7 @@ Javascript     |  Handlebars
 
 ### Screenshots of Website
 1. General
+
     Site home page. 
 
     CRUD: Select from procedure all procedures and their descriptions except for the procedure “Unavailable”.
