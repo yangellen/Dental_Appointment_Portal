@@ -200,11 +200,29 @@ Javascript     |  Handlebars
     &nbsp;
     &nbsp;    
     
+    5) Insert or delete a dentist.
+    
+    CRUD:
+    
+        1) Populate a table with all dentists: select all from the dentist table
+        
+        2) If Choose to add a dentist:
+        
+            i. insert into the dentist table the name of a new dentist
+            
+            ii. insert into the dentist_dental_procedure table the procedure “Unavailable” with new dentist’s id
+            
+        3) If Choose to delete a dentist:
+        
+            i. delete dentist from many-to-many table dentist_dental_procedure ii. delete dentist from dentist table  
+            
+    <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist.png" alt="Where_an_administrator_adds_or_removes_a_dentist" width="500"> 
+    
+    &nbsp;
+    &nbsp; 
     
     <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
-
-<img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist.png" alt="Where_an_administrator_adds_or_removes_a_dentist" width="500"> 
 
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png" alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">   
                                                                                                                                              
