@@ -76,6 +76,14 @@ Javascript     |  Handlebars
     &nbsp;
     &nbsp;
     
+    6) Make or change an appointment step 5: confirmation page.
+    
+    CRUD:
+    For making an appointment: insert into appointment a new appointment with the selected date, time, and procedure and dentist Id and patient account number  (patient Id).
+    
+    or
+    
+    For changing an appointment: update appointment and set the time and date to the newly selected time and date where the appointment is identified by the dentist Id and original date and time    
     
     
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
