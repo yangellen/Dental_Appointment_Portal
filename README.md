@@ -103,7 +103,7 @@ Javascript     |  Handlebars
     
     CRUD: select appointments from appointment for the patient with the given account number (patient id). 
     
-    <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments"" width="500">     
+    <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments" width="500">     
        
     &nbsp;
     &nbsp;
