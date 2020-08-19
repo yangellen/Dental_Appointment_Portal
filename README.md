@@ -107,12 +107,21 @@ Javascript     |  Handlebars
        
     &nbsp;
     &nbsp;
-  
- <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments" width="500"> 
+    
+    9) Cancel an appointment step 1: enter patient account number (patient id). 
+    
+    No CRUD functionality.  
+    
+    <img src="./screenshots/Cancel_an_appointment.png" alt="Cancel_an_appointment" width="500">    
+    
+    &nbsp;
+    &nbsp;    
+    
+<img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments" width="500"> 
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
 <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
 
-<img src="./screenshots/Cancel_an_appointment.png" alt="Cancel_an_appointment" width="500">
+
 
 
 <img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt=Confirms_that_an_appointment_was_deleted" width="500">
