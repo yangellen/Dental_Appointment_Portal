@@ -146,10 +146,21 @@ Javascript     |  Handlebars
     <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt="Displays_a_table_of_the_patient's_appointments" width="500"> 
     
     &nbsp;
-    &nbsp;                                                                                                                
-                                                                                                                
-<img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
-<img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
+    &nbsp;  
+    
+3. For Staff
+
+    1) Administrator login. A non-functional login page used to access the administrator side. 
+    
+    No CRUD functionality.   
+    
+    <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500"> 
+    
+    &nbsp;
+    &nbsp;
+    
+    <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
+
 
 <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
