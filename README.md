@@ -37,6 +37,8 @@ Javascript     |  Handlebars
     
     <img src="./screenshots/Patient_Home.png" alt="Patient_Home" width="500">    
     
+    &nbsp;
+    &nbsp;    
     
     2) Make appointment step 1: enter patient account number.
     
@@ -52,22 +54,29 @@ Javascript     |  Handlebars
     CRUD: select the procedures that the patient’s dentist performs except for the procedure “unavailable”. 
     
     <img src="./screenshots/Enter_the_appointment_procedure.png" alt="Enter_the_appointment_procedure" width="500">    
+    
     &nbsp;
-    &nbsp;    
+    &nbsp;  
+    
     4) Make or change an appointment step 3: select a date. 
     
     No CRUD functionality.    
     
     <img src="./screenshots/Enter_the_appointment_date.png" alt="Enter_the_appointment_date" width="500">  
     
+    &nbsp;
+    &nbsp;    
     
     5) Make or change an appointment step 4: select the time from a drop-down list.    
 
     CRUD: select the times (in half hour intervals) that the dentist is unavailable on the given date.
     
     <img src="./screenshots/Enter_appointment_time.png" alt="Enter_appointment_time" width="500">  
+    
     &nbsp;
     &nbsp;
+    
+    
     
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
 <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
