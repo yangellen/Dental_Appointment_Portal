@@ -158,11 +158,17 @@ Javascript     |  Handlebars
     
     &nbsp;
     &nbsp;
+        
+    2) Administrator home page. 
+    
+    No CRUD functionality.
     
     <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
-
-
-<img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
+    
+    &nbsp;
+    &nbsp;
+    
+    <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
 <img src="./screenshots/Where_an_administrator_adds_a_patient.png" alt="Where_an_administrator_adds_a_patient" width="500"> 
 <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist.png" alt="Where_an_administrator_adds_or_removes_a_dentist" width="500"> 
