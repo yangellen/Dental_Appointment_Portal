@@ -19,8 +19,9 @@ Javascript     |  Handlebars
 
 ### Screenshots of Website
 1. Site home page.
+    CRUD: Select from procedure all procedures and their descriptions except for the procedure “Unavailable”.
+    <img src="./screenshots/Site_Home.png" alt="Site_Home" width="500">  
 
-CRUD: Select from procedure all procedures and their descriptions except for the procedure “Unavailable”.
 
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
 <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
@@ -34,7 +35,7 @@ CRUD: Select from procedure all procedures and their descriptions except for the
 <img src="./screenshots/Enter_the_appointment_procedure.png" alt="Enter_the_appointment_procedure" width="500">
 <img src="./screenshots/Make_an_appointment.png" alt="Make_an_appointment" width="500"> 
 <img src="./screenshots/Patient_Home.png" alt="Patient_Home" width="500"> 
-<img src="./screenshots/Site_Home.png" alt="Site_Home" width="500">  
+
 <img src="./screenshots/View_all_booked_appointments.png" alt="View_all_booked_appointments." width="500">
 <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 <img src="./screenshots/Where_a_patient_selects_and_appointment_to_cancel.png" alt="Where_a_patient_selects_an_appointment_to_cancel" width="500">
