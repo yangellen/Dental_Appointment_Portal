@@ -126,6 +126,14 @@ Javascript     |  Handlebars
     &nbsp;
     &nbsp; 
     
+    11) View appointments step 1: enter patient account number.
+    
+    No CRUD functionality.  
+    
+    <img src="./screenshots/View_all_booked_appointments.png" alt="View_all_booked_appointments." width="500">    
+    
+    &nbsp;
+    &nbsp;    
     
 <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt="Displays_a_table_of_the_patient's_appointments" width="500"> 
                                                                                                                 
@@ -135,7 +143,7 @@ Javascript     |  Handlebars
 
 
 
-<img src="./screenshots/View_all_booked_appointments.png" alt="View_all_booked_appointments." width="500">
+
 
 <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
