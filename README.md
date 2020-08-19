@@ -115,21 +115,26 @@ Javascript     |  Handlebars
     <img src="./screenshots/Cancel_an_appointment.png" alt="Cancel_an_appointment" width="500">    
     
     &nbsp;
-    &nbsp;    
+    &nbsp;  
+    
+    10) Cancel an appointment confirmation page.
+    
+    CRUD: Delete from appointment the appointment with the specified date, time and dentist Id.   
+    
+    <img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt=Confirms_that_an_appointment_was_deleted" width="500">
+    
+    &nbsp;
+    &nbsp; 
+    
     
 <img src="./screenshots/Displays_a_table_of_the_patient's_appointments.png" alt=Displays_a_table_of_the_patient's_appointments" width="500"> 
+                                                                                                                
+                                                                                                                
 <img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
 <img src="./screenshots/Administrator_login.png" alt="Administrator_login" width="500">
 
 
 
-
-<img src="./screenshots/Confirms_that_an_appointment_was_deleted.png" alt=Confirms_that_an_appointment_was_deleted" width="500">
-
-
- 
-
- 
 <img src="./screenshots/View_all_booked_appointments.png" alt="View_all_booked_appointments." width="500">
 
 <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
