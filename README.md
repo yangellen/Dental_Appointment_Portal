@@ -16,3 +16,7 @@ Javascript     |  Handlebars
 ### Database Design
 <img src="./documentation/Entity_Relationship_Diagram.png" alt="ERD" width="500">
 <img src="./documentation/Schema.png" alt="Schema" width="500">
+
+### Screenshots of Website
+<img src="./screenshots/Administrator_Home.png" alt="Administrator_Home" width="500">
+
