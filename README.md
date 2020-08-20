@@ -239,12 +239,34 @@ Javascript     |  Handlebars
         
         7) Get a list of all the procedures and their descriptions that the dentist is signed up for to print in a table: Select procedure name and description from dental_procedure inner joined to dentist_dental_procedure where the dentist Id is that entered by the dentist    
         
-        <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png" alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">      
+    <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png" alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">      
         
-        &nbsp;
-        &nbsp;   
+    &nbsp;
+    &nbsp;   
+    
+    7) Schedule time off or cancel a patient appointment.
+    
+    CRUD:
+    
+        1) To verify the dentist Id: Select the dentist Id from the dentist table
         
-        <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
+        2) Get a list of appointments for the dentist to optionally select an appointment to delete: Select
+an appointment from the appointments table for the given dentist Id
+
+        3) If delete an appointment: Delete an appointment using the selected dentist id, date, and time
+        
+        4) If a dentist chooses to book time off:
+        
+            i. Select all times in half-hour intervals that the dentist has appointments on the selected
+day.
+            ii. Insert into the appointment table an appointment with the procedure “Unavailable” and
+the patient field left as NULL.
+
+        5) Get the dentist’s name: Select the dentist’s name from the dentist table.
+        
+        6) Put all the dentist’s appointments in a table: Select all appointments, including the procedure name and patient name from the appointment table inner and left joined with other tables, where the dentist’s id is equal to the input value.  
+        
+   <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
 
   
