@@ -250,17 +250,16 @@ Javascript     |  Handlebars
     
         1) To verify the dentist Id: Select the dentist Id from the dentist table
         
-        2) Get a list of appointments for the dentist to optionally select an appointment to delete: Select
-an appointment from the appointments table for the given dentist Id
+        2) Get a list of appointments for the dentist to optionally select an appointment to delete: Select an appointment from the appointments table for the given dentist Id
 
         3) If delete an appointment: Delete an appointment using the selected dentist id, date, and time
         
         4) If a dentist chooses to book time off:
         
-            i. Select all times in half-hour intervals that the dentist has appointments on the selected
-day.
-            ii. Insert into the appointment table an appointment with the procedure “Unavailable” and
-the patient field left as NULL.
+            i. Select all times in half-hour intervals that the dentist has appointments on the selected day.
+
+            ii. Insert into the appointment table an appointment with the procedure “Unavailable” and the patient field left as NULL.
+
 
         5) Get the dentist’s name: Select the dentist’s name from the dentist table.
         
