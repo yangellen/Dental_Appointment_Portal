@@ -221,8 +221,31 @@ Javascript     |  Handlebars
     &nbsp;
     &nbsp; 
     
-    <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
+    6) Add or remove a dentist’s procedures.
+    
+    CRUD:
+    
+        1) To verify the dentist Id: Select the dentist Id from the dentist table
+        
+        2) Get a list of all the procedures the dentist is signed up for. This is used to select a procedure to remove: Select procedure names from the dental_procedure table inner joined with the denist_dental_procedure table where the procedure is not “Unavailable”.
+        
+        3) Get a list of all the procedures the dentist is not signed up for. The dentist can choose to add one of these to their list of procedures: Select procedure names from dental_procedure where the procedure is not in the list of procedures the dentist is already signed up for
+        
+        4) If choose to add a procedure: Insert into many-to-many table dentist_dental_procedure the dentist’s Id and the procedure Id
+        
+        5) If choose to delete a procedure: delete from the many-to-many table dentist_dental_procedure the dentist’s Id and the procedure Id
+        
+        6) Get the dentist’s name: Select dentist’s name from the dentist table using the dentist’s account number
+        
+        7) Get a list of all the procedures and their descriptions that the dentist is signed up for to print in a table: Select procedure name and description from dental_procedure inner joined to dentist_dental_procedure where the dentist Id is that entered by the dentist    
+        
+        <img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png" alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">      
+        
+        &nbsp;
+        &nbsp;   
+        
+        <img src="./screenshots/Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment.png" alt="Where_a_dentist_can_either_add_time_off_to_the_schedule_or_cancel_an_appointment" width="500">  
 
 
-<img src="./screenshots/Where_an_administrator_adds_or_removes_a_dentist's_procedures.png" alt="Where_an_administrator_adds_or_removes_a_dentist's_procedures" width="500">   
+  
                                                                                                                                              
