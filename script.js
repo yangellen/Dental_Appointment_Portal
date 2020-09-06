@@ -1,6 +1,4 @@
 /*************************************************************************
- * Name:        Group 8: Selma Leathem and Ellen Yang
- * Date:        11/24/2019
  * Description: Backend code for the Dental Appointment Portal where
  *              data from the front end is processed and sent to the
  *              database for storage and data is retrieved from the
