@@ -1,9 +1,3 @@
-/*********************************************************************
-* Name:        Group 8: Selma Leathem and Ellen Yang
-* Date:        11/22/2019
-* Description: Create dental appointment portal database using
-               data definition queries. 
-**********************************************************************/
 
 DROP TABLE IF EXISTS `dentist_dental_procedure`;
 DROP TABLE IF EXISTS `appointment`;
