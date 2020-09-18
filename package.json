@@ -1,19 +1,20 @@
 {
-  "name": "hello-world",
+  "name": "smile_savers",
   "version": "1.0.0",
-  "description": "Hello world with express and node.js",
+  "description": "The Smile Savers is a dental appointment application.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
-  "author": "OSU",
+  "author": "Ellen Yang",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.13.3",
-    "express": "^4.13.2",
-    "express-handlebars": "^2.0.1",
-    "express-session": "^1.11.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "express-session": "^1.17.1",
     "moment": "^2.24.0",
-    "mysql": "^2.8.0"
+    "mysql": "^2.18.1"
   }
 }
