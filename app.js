@@ -15,15 +15,19 @@
  *               npm install body-parser
  ************************************************************************/
 
+/*
+Dependencies
+*/
+const moment = require('moment');  /* adds the ability to convert numbers to dates of any format */
 
-var moment = require('moment');  /* adds the ability to convert numbers to dates of any format */
+const express = require('express');
+const mysql = require('mysql');
 
-var express = require('express');
-var mysql = require('./dbcon.js');
-
-var app = express();
-var handlebars = require('express-handlebars').create({defaultLayout:'main'});
-var bodyParser = require('body-parser');
+/*
+*/
+const app = express();
+const handlebars = require('express-handlebars').create({defaultLayout:'main'});
+const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -31,7 +35,11 @@ app.use(express.static('public'));
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 44467);
+
+/*
+Environment configuation
+*/
+var DATABASE_CREDENTIALS = process.env.CLEARDB_DATABASE_URL
 
 /*Home main page, user can enter either as patient or staff*/
 /*
